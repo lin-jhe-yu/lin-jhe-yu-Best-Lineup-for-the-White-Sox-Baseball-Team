@@ -1,4 +1,5 @@
-baseball picture.jpg
+![baseball picture](https://github.com/lin-jhe-yu/lin-jhe-yu-Best-Lineup-for-the-White-Sox-Baseball-Team/assets/121969452/af6e4f9b-58ac-4859-9406-7a76a56f1866)
+
 # Best Lineup for the White Sox Baseball Team
 
 The movie “Moneyball” tells the story of a baseball general manager who put together a competitive team on a small budget. Based on this story, I proposed a data analysis project for a “Business Modeling and Simulation” course to identify the best lineup for the Chicago White Sox. 
