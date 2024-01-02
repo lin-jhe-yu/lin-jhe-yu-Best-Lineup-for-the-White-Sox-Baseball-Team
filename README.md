@@ -1,14 +1,16 @@
 ![baseball picture](https://github.com/lin-jhe-yu/lin-jhe-yu-Best-Lineup-for-the-White-Sox-Baseball-Team/assets/121969452/af6e4f9b-58ac-4859-9406-7a76a56f1866)
-
+<sup>Photo by Pixabay: https://www.pexels.com/photo/baseball-player-on-field-photo-163516/
 # Best Lineup for the White Sox Baseball Team
+The book and movie “Moneyball” tells the story of Billy Beane, the Oakland Athletics general manager who put together a competitive baseball team despite having a restricted budget. His “secret” was the strategic use of data-driven methodology. I was inspired by this movie, so I used it to propose a data analysis project for a “Business Modeling and Simulation” course.
 
-The movie “Moneyball” tells the story of a baseball general manager who put together a competitive team on a small budget. Based on this story, I proposed a data analysis project for a “Business Modeling and Simulation” course to identify the best lineup for the Chicago White Sox. 
+## Problem Description
 
-## Description
+In the 2022 regular season, the Chicago White Sox team lost half of their series (win rate of 0.5) and failed to advance to the playoffs. Therefore, our project aims to improve its performance and provide the best lineup. By examining different lineup possibilities and using statistical analysis, we hope to identify the most effective combination of players for each position.
 
-An in-depth paragraph about your project and overview of use.
+## Input Data Analysis & Modeling
+Baseball teams and fans love statistics, so we had a large body of data to work with. Data is retrived from https://www.mlb.com/whitesox/stats/. In the data set, the performance of the batters belonging to the White Sox team was carried out by compiling their individual batting statistics from 2022 data, with each row of an individual batting probability sum equal to 1. Furthermore, the base salary of the batters for the year 2023 was incorporated into the data set which helps us to analyze how cost relates to win rate and expected run.
 
-## Getting Started
+The dataset for the individual batting statistics of batters comprises several variables, plate appearances (PA) include at bat (AB), walk (BB), hit by a pitch (HBP), sacrifice fly (SF), and sacrifice bunt (SAC). However, the act of executing sacrifice bunt (SAC) is considered a strategic decision and not a reflection of the batter's ability, it has been excluded from our batting individual batting ability. The hit package variable includes single base hits (1B hits), double base hits (2B hits), triple base hits (3B hits), and home runs (HRs). In addition, AB has been further categorized into ground outs (GO), air outs (AO), and strikeouts (SO), the ground-out is divided into 1 out and 2 outs (GIDP).
 
 ### Dependencies
 
