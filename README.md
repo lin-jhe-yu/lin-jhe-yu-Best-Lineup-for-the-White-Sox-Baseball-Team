@@ -68,27 +68,71 @@ In algorithm 2, we have to first simulate a run for the first 9 innings, which e
 
 The possible batting outcomes of a player depend on the base situation, and the probabilities of these outcomes are determined by the player's historical data in the 2022 regular season. If there is no runner on third base, there is no chance for batter to hit a sacrifice fly. Similarly, if there is no runner on first base, there is no chance for batter to hit a groundout into double play. The first batting order combination in the list is Andrew Benintendi, Luis Robert Jr, Oscar Colás, Eloy Jiménez, Andrew Vaughn, Seby Zavala, Gavin Sheets, Romy González, Yoán Moncada. We visualize the simulation of 9 innings run and run allowed for it as an example (see appendix A). In case of a tie (where the total number of runs scored in the first 9 innings is equal to the number of runs allowed), the game will continue with an extra inning until a winner is determined. To ensure accuracy, we simulate 10,000 games for each batting order combination (lineup) in this project.
 
+## Output Analyses
+### Analysis of the Best Lineup
 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
+After simulation, the best lineup for the Chicago White Sox team is identified. Table 1 shows the 9 batters who make up this lineup. 
+#### Table 1: Batters in the Best Lineup
+|Batting Order | Batters          | Position    |
+| :---         | :---             | :---        |
+| 1            | Andrew Benintendi| outfielders |
+| 2            | Tim Anderson     | infielders  |
+| 3            | Oscar Colás      | outfielders |
+| 4            | Eloy Jiménez     | outfielders |
+| 5            | Luis Robert Jr   | outfielders |
+| 6            | Andrew Vaughn    | infielders  |
+| 7            | Seby Zavala      | catchers    |
+| 8            | Elvis Andrus     | infielders  |
+| 9            | Gavin Sheets     | infielders  |
 
-## Version History
+In the 2022 season, the average run score for 9 innings was 4.1111. On the other hand, in the simulated scenario using the best lineup, the average run score was 4.1849. This indicates that using the best lineup in the simulated scenario, without considering extra innings, led to a higher average run score of 0.07 points for 9 innings compared to the actual season. 
+Among the 162 games in the 2022 season, the team won 81 games, resulting in a win rate of 0.5. By simulating the performance of the team using the best lineup, the win rate was found to be 0.5132. Multiplying this win rate by the total  number of games in a regular season (162 games) yielded an estimated number of 83 games (0.5132 x 162 = 83.1384) won using this lineup. These results suggest that using this lineup in the upcoming 2023 season could potentially increase the team’s wins by two games compared to the previous season in 2022. 
 
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
-* 0.1
-    * Initial Release
+### Further Analysis
+#### Standard Deviation Analysis
+The relationship between the expected runs scored and the standard deviation for each lineup of the Chicago White Sox is illustrated in Figure 7. The various plots in the figure represent different lineups. A clear trend can be observed, indicating that higher expected runs scored are generally associated with higher standard deviation.
 
-## License
+#### Figure 7: Relationship between Expected Runs Scored and Standard Deviation for Chicago White Sox Lineups
+<img width="306" alt="7" src="https://github.com/lin-jhe-yu/lin-jhe-yu-Best-Lineup-for-the-White-Sox-Baseball-Team/assets/121969452/87f64be1-4706-4c7f-a511-ab3308a8994d">
 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+The relationship between expected runs scored and win rate is shown in Figure 8. The plots in the figure demonstrate a clear pattern, with the trend line indicating a positive slope. This suggests that as the expected runs scored increases, the win rate tends to increase as well. Hence, it implies that scoring more runs has a higher likelihood of winning games.
 
-## Acknowledgments
+Figure 7: Relationship between Expected Runs Scored and Standard Deviation for Chicago White Sox Lineups
+<img width="303" alt="8" src="https://github.com/lin-jhe-yu/lin-jhe-yu-Best-Lineup-for-the-White-Sox-Baseball-Team/assets/121969452/78bc7807-9189-40c1-b406-e6599fce6bae">
 
-Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
+#### Cost Analysis of Each Lineup
+The downward trend exhibited in Figure 9 is clear, with the data points showing a noticeable decrease in expected runs scored as payroll increases. Similarly, Figure 10 also indicates a negative correlation between expected runs scored and win rate. An increase in payroll often corresponds with a decrease in win rate. 
+Moreover, lineups with high win rate are typically found in the middle class of payroll, while a higher payroll does not necessarily lead to an increase in win rate. In fact, an increase in payroll beyond the middle class may even lead to a decline in win rate and drag down the bottom line.
+Thus, the amount of money spent on players does not necessarily translate into higher expected runs scored and win rate. These findings suggest that there may be other factors that contribute to a team's success beyond simply spending money on players.
+
+#### Figure 9: Relationship between Expected Runs Scored and Payroll of Each Lineup
+<img width="218" alt="9" src="https://github.com/lin-jhe-yu/lin-jhe-yu-Best-Lineup-for-the-White-Sox-Baseball-Team/assets/121969452/d9be6d1f-98cf-4b37-b6dc-ba94edf67b9e">
+
+#### Figure 10: Relationship between Win Rate and Payroll of Each Lineup
+<img width="216" alt="10" src="https://github.com/lin-jhe-yu/lin-jhe-yu-Best-Lineup-for-the-White-Sox-Baseball-Team/assets/121969452/0621b736-9776-4518-ab40-147ab7c23edd">
+
+#### Individual Player’s Performance Analysis
+In Figure 11, it shows the proportion of each player's occurrence in the second half of the lineups among all lineups. Based on the findings from the frequency proportion of players in the second half of the lineup, it shows that Hanser Alberto has the highest frequency proportion of 61.25% among all the players. This suggests that he is underperforming. Therefore, providing extra training to Hanser may be beneficial to improve his performance and better fit in the team.
+
+#### Figure 11: Proportion of player in Second Half of Lineup (total presence in second half/ total presence in all lineups)
+<img width="377" alt="11" src="https://github.com/lin-jhe-yu/lin-jhe-yu-Best-Lineup-for-the-White-Sox-Baseball-Team/assets/121969452/cb3709ed-3faf-4b0c-900f-7d7a2738003c">
+
+## Conclusion
+In a nutshell, the Chicago White Sox team is recommended to use the best lineup in the coming season in 2023. Based on the findings of our analysis, using the best lineup can lead to a higher average run scored compared to the actual 2022 season. As a result, implementing the best lineup in the upcoming season could potentially result in an increase in the number of games won for the team. 
+When pursuing higher run scored, the team should carefully consider how changes in standard deviation can affect their results. Our analysis revealed a significant positive correlation between expected runs scored and standard deviation. This implies that higher expected runs scored are generally associated with higher variability in the lineup’s performance. For this reason, the team should be mindful of the potential risks and uncertainties associated with pursuing higher runs scored and take those changes into account when making strategic decisions.
+Relying solely on the most expensive players within a lineup to achieve the highest runs is not a prudent strategy for the Chicago White Sox team. Although high-priced players are often considered to be better, the team's success is not solely determined by individual talent or payroll. Instead, other factors such as team synergy, coordination, and collective effectiveness can also influence the team's ability to score runs and win games. Therefore, the team should focus on building a cohesive and effective team that can perform well together, rather than relying solely on spending more money on players.
+
+## Takeaway
+*
+*
+*
+
+## Discussions
+According to a previous study, when changing batting order with the same players, an increase in runs scored led to an increase in standard deviation. Our own simulation corroborated this finding, as we observed substituting players also resulted in an increase in standard deviation when there is an increase in runs scored. However, our simulation was conducted using a traditional batting order. Therefore, to gain a more comprehensive understanding of the impact of changing the batting order on standard deviation, further investigations can be conducted using different batting orders. By using this model, the Chicago White Sox team can determine whether substituting players or changing the batting order has a greater impact on standard deviation when aiming for higher runs scored.  This would provide valuable insights for the team to make informed decisions regarding their batter substitution strategy and optimize their performance on the field.
+
+## Reference
+* Bukiet, B., Harold, R., & Palacios, J. L. (n.d.). A Markov Chain Approach to Baseball. In Source: Operations Research (Vol. 45, Issue 1). https://about.jstor.org/terms
+* Ursin, D. (2014). A MARKOV MODEL FOR BASEBALL WITH APPLICATIONS.
+* Hirotsu, N. (2011). Reconsideration of the best batting order in baseball: Is the order to maximize the expected number of runs really the best? Journal of Quantitative Analysis in Sports, 7(2). doi:10.2202/1559-0410.1332
+* 2023 Chicago White Sox White Sox Roster & Staff. (n.d.). Retrieved May 6, 2023, from https://www.mlb.com/whitesox/roster
+
