@@ -10,17 +10,17 @@ In the 2022 regular season, the Chicago White Sox team lost half of their series
 ## Input Data Analysis & Modeling
 Baseball teams and fans love statistics, so we had a large body of data to work with. Data is retrived from https://www.mlb.com/whitesox/stats/. In the data set, the performance of the batters belonging to the White Sox team was carried out by compiling their individual batting statistics from 2022 data, with each row of an individual batting probability sum equal to 1. Furthermore, the base salary of the batters for the year 2023 was incorporated into the data set which helps us to analyze how cost relates to win rate and expected run.
 
-The dataset for the individual batting statistics of batters comprises several variables, plate appearances (PA) include at bat (AB), walk (BB), hit by a pitch (HBP), sacrifice fly (SF), and sacrifice bunt (SAC). However, the act of executing sacrifice bunt (SAC) is considered a strategic decision and not a reflection of the batter's ability, it has been excluded from our batting individual batting ability. The hit package variable includes single base hits (1B hits), double base hits (2B hits), triple base hits (3B hits), and home runs (HRs). In addition, AB has been further categorized into ground outs (GO), air outs (AO), and strikeouts (SO), the ground-out is divided into 1 out and 2 outs (GIDP).
+The dataset for the individual batting statistics of batters comprises several variables, plate appearances (PA) include at bat (AB), walk (BB), hit by a pitch (HBP), sacrifice fly (SF), and sacrifice bunt (SAC). However, the act of executing sacrifice bunt (SAC) is considered a strategic decision and not a reflection of the batter's ability, it has been excluded from our batting individual batting ability.
 
-### Dependencies
+#### Figure 1: Classification of all batting outcomes
+![3](https://github.com/lin-jhe-yu/lin-jhe-yu-Best-Lineup-for-the-White-Sox-Baseball-Team/assets/121969452/7a42747e-cdd0-4712-962b-af1c1e47acf3)
 
 * Describe any prerequisites, libraries, OS version, etc., needed before installing program.
 * ex. Windows 10
 
-### Installing
+### Run Allowed Analyses
+In 2022, the White Sox team played 162 games in the AL Central, and the data includes information about Runs Allowed (RA) and Innings (Inn). Runs Allowed indicates the amount of runs that score against a team. Assessing RA performance reflects the team's collective effort, making it challenging to attribute losses to a specific individual. Additionally, the composition of pitchers in 2022 and 2023 has stayed relatively constant. Thus, we assume there are no significant changes in fielding performance this year.
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
 
 ### Executing program
 
