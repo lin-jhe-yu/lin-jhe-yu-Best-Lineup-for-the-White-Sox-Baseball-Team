@@ -15,11 +15,16 @@ The dataset for the individual batting statistics of batters comprises several v
 #### Figure 1: Classification of all batting outcomes
 ![3](https://github.com/lin-jhe-yu/lin-jhe-yu-Best-Lineup-for-the-White-Sox-Baseball-Team/assets/121969452/7a42747e-cdd0-4712-962b-af1c1e47acf3)
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
-
 ### Run Allowed Analyses
 In 2022, the White Sox team played 162 games in the AL Central, and the data includes information about Runs Allowed (RA) and Innings (Inn). Runs Allowed indicates the amount of runs that score against a team. Assessing RA performance reflects the team's collective effort, making it challenging to attribute losses to a specific individual. Additionally, the composition of pitchers in 2022 and 2023 has stayed relatively constant. Thus, we assume there are no significant changes in fielding performance this year.
+
+The histogram of the density function for Runs Allowed (RA) of 9 innings in 2022 was plotted in Figure 2. The results indicated that the distribution of RA is approximately exponential. The original dataset comprised the RA values for 9 innings in 2022. To generate random numbers that conform to the exponential distribution, we used the previous year's data to set the lambda. Moreover, the histogram of RA in extra innings, which is displayed in Figure 3, also demonstrated an exponential distribution, the simulation of extra innings was performed in the same way as RA for 9 innings.
+
+#### Figure 2: Histogram and Density Function of Runs Allowed of 9 innings in 2022 with Random Numbers
+<img src="https://github.com/lin-jhe-yu/lin-jhe-yu-Best-Lineup-for-the-White-Sox-Baseball-Team/assets/121969452/df80e8e4-5f16-4d9a-a118-5f7c9d858401.type" width="471" height="354">
+
+#### Figure 3: Histogram and Density Function of Runs Allowed of Extra inning in 2022 with Random Numbers
+<img src="https://github.com/lin-jhe-yu/lin-jhe-yu-Best-Lineup-for-the-White-Sox-Baseball-Team/assets/121969452/1add8eb0-76b1-452a-a2b8-276caefd4ca0.type" width="471" height="354">
 
 
 ### Executing program
