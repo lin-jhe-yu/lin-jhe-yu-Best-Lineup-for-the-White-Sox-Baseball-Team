@@ -1,1 +1,1 @@
-# lin-jhe-yu-Best-Lineup-for-the-White-Sox-Baseball-Team
+# Best Lineup for the White Sox Baseball Team
