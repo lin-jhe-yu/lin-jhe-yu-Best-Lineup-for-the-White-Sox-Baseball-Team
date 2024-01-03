@@ -7,7 +7,7 @@ The book and movie “Moneyball” tells the story of Billy Beane, the Oakland A
 In the 2022 regular season, the Chicago White Sox team lost half of their series (win rate of 0.5) and failed to advance to the playoffs. Therefore, our project aims to improve its performance and provide the best lineup. By examining different lineup possibilities and using statistical analyses, we hope to identify the most effective combination of players for each position.
 
 ## Input Data Analyses & Modeling
-Baseball teams and fans love statistics, so we had a large body of data to work with. Data was retrieved from https://www.mlb.com/whitesox/stats/. In the data set, the performance of the White Sox team batters was carried out by compiling their individual batting statistics from 2022 data, with each row of an individual batting probability sum equal to 1. Furthermore, the base salary of the batters for the year 2023 was incorporated into the data set which helps us to analyze how cost relates to win rate and expected run.
+Baseball teams and fans love statistics, so we had a large body of data to work with. Batter data was retrieved from https://www.mlb.com/whitesox/stats/. In the data set, the performance of the White Sox team batters was carried out by compiling their individual batting statistics from 2022 data, with each row of an individual batting probability sum equal to 1. 
 
 The dataset for the individual batting statistics of batters comprises several variables, plate appearances (PA) include at bat (AB), walk (BB), hit by a pitch (HBP), sacrifice fly (SF), and sacrifice bunt (SAC). However, the act of executing sacrifice bunt (SAC) is considered a strategic decision and not a reflection of the batter's ability, it has been excluded from our batting individual batting ability.
 
@@ -15,33 +15,14 @@ The dataset for the individual batting statistics of batters comprises several v
 ![3](https://github.com/lin-jhe-yu/lin-jhe-yu-Best-Lineup-for-the-White-Sox-Baseball-Team/assets/121969452/7a42747e-cdd0-4712-962b-af1c1e47acf3)
 
 #### Table 1: Batters data <sup> 
-| Name | Back_no | Position | Season | AB/PA | 1B/PA | 2B/PA | 3B/PA | HR/PA | GIDP/PA | GO/PA | AO/PA | SO/PA | BB/PA | HBP/PA | SF/PA | Base Salary |
-| :--- | :---    | :---     | :---   | :---  | :---  | :---  | :---  | :---  | :---    | :---  | :---  | :---  | :---  | :---   | :---  | :---  |
-|Yasmani Grandal|	24|	catchers|	2022|	0.87	0.14	0.02	0.00	0.01	0.04	0.18	0.27	0.21	0.12	0.01	0.01	$18,250,000
-|Seby Zavala|	44	|catchers	|2022|	0.88	0.16	0.07	0.00	0.01	0.00	0.10	0.22	0.32	0.09	0.01	0.01	$732,000
-|Hanser Alberto|	26|	infielders|	2022|	0.98	0.16	0.06	0.01	0.01	0.09	0.24	0.25	0.16	0.02	0.00	0.00	$1,300,000
-|Tim Anderson|	7	|infielders	|2022|	0.95	0.23	0.04	0.00	0.02	0.08	0.24	0.18	0.16	0.04	0.01	0.00	$12,500,000
-|Elvis Andrus|	1	|infielders	|2022|	0.93	0.15	0.06	0.00	0.03	0.07	0.31	0.16	0.16	0.07	0.01	0.00	$3,000,000
-|Yoán Moncada|	10|	infielders|	2022|	0.92	0.12	0.04	0.00	0.03	0.02	0.19	0.25	0.26	0.07	0.00	0.00	$17,000,000
-|Gavin Sheets|	32|	infielders|	2022|	0.92	0.14	0.05	0.00	0.04	0.04	0.17	0.28	0.21	0.07	0.01	0.01	$735,000
-|Andrew Vaughn|	25|	infielders|	2022|	0.92	0.17	0.05	0.00	0.03	0.04	0.23	0.23	0.17	0.06	0.02	0.01	$760,000
-|Romy González|	12|	infielders|	2022|	0.96	0.17	0.04	0.01	0.02	0.03	0.20	0.14	0.36	0.02	0.01	0.01	$723,000
-|Andrew Benintendi|	23|	outfielders|	2022|	0.89	0.21	0.04	0.01	0.01	0.03	0.26	0.18	0.15	0.10	0.00	0.01	$8,000,000
-|Oscar Colás|	22|	outfielders|	2022	0.91	0.19	0.05	0.01	0.04	0.04	0.26	0.10	0.23	0.07	0.01	0.00	$720,000
-|Luis Robert Jr|	88|	outfielders|	2022	0.95	0.19	0.04	0.00	0.03	0.02	0.22	0.25	0.19	0.04	0.01	0.00	$9,500,000
-|Eloy Jiménez|	74|	outfielders|	2022	0.89	0.18	0.04	0.00	0.05	0.04	0.19	0.18	0.22	0.09	0.01	0.01	$9,500,000
-
-
-                                                                     
-
+<img width="905" alt="Screen Shot 2024-01-02 at 6 37 26 PM" src="https://github.com/lin-jhe-yu/lin-jhe-yu-Best-Lineup-for-the-White-Sox-Baseball-Team/assets/121969452/b56088db-d73b-4809-b4c1-579da3624fe1">
 
 <sup>The numbers are rounded
 
-
 ### Run Allowed Analyses
-In 2022, the White Sox team played 162 games in the AL Central, and the data includes information about Runs Allowed (RA) and Innings (Inn). Runs Allowed indicates the amount of runs that score against a team. Assessing RA performance reflects the team's collective effort, making it challenging to attribute losses to a specific individual. Additionally, the composition of pitchers in 2022 and 2023 has stayed relatively constant. Thus, we assume there are no significant changes in fielding performance this year.
+In 2022, the White Sox team played 162 games in the AL Central. Runs allowed (RA) data was retrieved from https://www.baseball-reference.com/teams/CHW/2022-schedule-scores.shtml. RA indicates the amount of runs that score against a team. RA performance reflects the team's effort, making it challenging to attribute to a specific individual. Additionally, the composition of pitchers in 2022 and 2023 has stayed relatively constant. Thus, we assume there are no significant changes in fielding performance this year.
 
-The histogram of the density function for Runs Allowed (RA) of 9 innings in 2022 was plotted in Figure 2. The results indicated that the distribution of RA is approximately exponential. The original dataset comprised the RA values for 9 innings in 2022. To generate random numbers that conform to the exponential distribution, we used the previous year's data to set the lambda. Moreover, the histogram of RA in extra innings, which is displayed in Figure 3, also demonstrated an exponential distribution, the simulation of extra innings was performed in the same way as RA for 9 innings.
+The distribution of 9 innings RA in 2022 is approximately exponential (see Figure 2). To generate random numbers that conform to the exponential distribution, we used the previous year's data to set the lambda. Moreover, the distribution of RA in extra innings also demonstrated an exponential distribution (see Figure 3). The simulation of extra innings was performed in the same way as RA for 9 innings.
 
 #### Figure 2: Histogram and Density Function of Runs Allowed of 9 innings in 2022 with Random Numbers
 <img src="https://github.com/lin-jhe-yu/lin-jhe-yu-Best-Lineup-for-the-White-Sox-Baseball-Team/assets/121969452/df80e8e4-5f16-4d9a-a118-5f7c9d858401.type" width="471" height="354">
