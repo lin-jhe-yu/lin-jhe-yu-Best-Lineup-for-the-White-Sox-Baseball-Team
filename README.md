@@ -57,21 +57,23 @@ We assume the following base advancing rule:
 <img width="416" alt="4" src="https://github.com/lin-jhe-yu/lin-jhe-yu-Best-Lineup-for-the-White-Sox-Baseball-Team/assets/121969452/23afbd93-c5b0-42ab-a0e5-8b4e9de4b16e">
 
 #### Algorithm 1: List out all the lineup combinations and their batting order.
-In 2022, designated hitters were adopted universally in MLB, meaning that pitchers are no longer required to hit the ball. This rule change allows teams to have a designated hitter in place of the pitcher, who is often not as skilled at batting as the other players. There are 13 players in the white sox team in 2023, including 2 catchers, 7 infielders, 4 outfielders. Except for pitchers, players in the batting lineup and fielding positions should be consistent, which means that each batting combination would consist of 1 catcher, 4 infielders, 3 outfielders, and 1 designated hitter. Thus, the amount of batting combinations is <img width="211" alt="9" src="https://github.com/lin-jhe-yu/lin-jhe-yu-Best-Lineup-for-the-White-Sox-Baseball-Team/assets/121969452/6a4f1183-cdd1-431a-85a3-c373170fc59b">
-
-In 1997, Bukiet et al. proposed ten criteria for arranging optimal batting orders for a team. However, the possible batting orders for all of our 387 combinations (987 batting orders for each combination, resulting in a total of 381,969 possibilities) makes it challenging and time-consuming to compute. To address this issue, the project adopted an adjusted version of the traditional batting order proposed by Ursin (2014) to reduce computation time.
-Under the adjusted approach, the best batter (highest slugging ability) is positioned at 4th in the batting order, with the second-best batter (second highest slugging ability) at 3rd. The player with the highest on-base percentage is placed at 1st, while the remaining batters are placed at 5th to 9th based on their decreasing order of batting ability. This approach simplifies the task of arranging an optimal batting order by considering a smaller subset of possibilities, thereby making the computation more manageable within the given time constraints.
-
 #### Figure 5: Algorithm 1
 <img width="173" alt="5" src="https://github.com/lin-jhe-yu/lin-jhe-yu-Best-Lineup-for-the-White-Sox-Baseball-Team/assets/121969452/c19ecd26-3b5d-4612-b60a-44c60976b7ac">
 
+There are 13 players in the white sox team in 2023, including 2 catchers, 7 infielders, 4 outfielders. Players in the batting lineup and fielding positions should be consistent, which means that each batting combination would consist of 1 catcher, 4 infielders, 3 outfielders, and 1 designated hitter. Thus, the amount of batting combinations is <img width="230" alt="15" src="https://github.com/lin-jhe-yu/lin-jhe-yu-Best-Lineup-for-the-White-Sox-Baseball-Team/assets/121969452/6a4f1183-cdd1-431a-85a3-c373170fc59b">
+
+In 1997, Bukiet et al. proposed ten criteria for arranging optimal batting orders for a team. However, the possible batting orders for all of our 387 combinations (987 batting orders for each combination, resulting in a total of 381,969 possibilities) makes it challenging and time-consuming to compute. To address this issue, the project adopted an adjusted version of the traditional batting order proposed by Ursin (2014) to reduce computation time (see Figure 6 for modified batting order strategy).
+
+#### Figure 6: Modified batting order strategy
+<img width="800" alt="15" src="https://github.com/lin-jhe-yu/lin-jhe-yu-Best-Lineup-for-the-White-Sox-Baseball-Team/assets/121969452/67835543-312a-4c2b-860f-9b4fa60bc0c3">
+
 #### Algorithm 2.1: Simulate run for n innings
-In algorithm 2, we have to first simulate a run for the first 9 innings, which executes the algorithm 2.1 for 9 times. There is a for loop to control the time that the simulation executes. The program generates the batting outcome according to the probabilities, changes the base situation correspondingly, and records the outs if applicable. The run will only be recorded if the inning does not end (3 outs). Same process is applied to extra innings except the simulation only runs for 1 time this time. The algorithm 2.1 (simulate run for n innings) is shown below.
+#### Figure 7: Algorithm 2.1
+<img width="360" alt="16" src="https://github.com/lin-jhe-yu/lin-jhe-yu-Best-Lineup-for-the-White-Sox-Baseball-Team/assets/121969452/9e1b4306-13c9-408b-8483-898c3c3d1339">
 
-#### Figure 6: Algorithm 2
-<img width="360" alt="6" src="https://github.com/lin-jhe-yu/lin-jhe-yu-Best-Lineup-for-the-White-Sox-Baseball-Team/assets/121969452/2155071c-d5a9-427b-a471-e6cdd055110d">
+In algorithm 2, we have to first simulate a run for the first 9 innings (executes the algorithm 2.1 for 9 times). The program generates the batting outcome according to the probabilities, changes the base situation correspondingly, and records the outs if applicable. The run will only be recorded if the inning does not end (3 outs). Same process is applied to extra innings except the simulation only runs for 1 time this time. To ensure accuracy, we simulate 10,000 games for each batting order combination (lineup) in this project.
 
-The possible batting outcomes of a player depend on the base situation, and the probabilities of these outcomes are determined by the player's historical data in the 2022 regular season. If there is no runner on third base, there is no chance for batter to hit a sacrifice fly. Similarly, if there is no runner on first base, there is no chance for batter to hit a groundout into double play. The first batting order combination in the list is Andrew Benintendi, Luis Robert Jr, Oscar Colás, Eloy Jiménez, Andrew Vaughn, Seby Zavala, Gavin Sheets, Romy González, Yoán Moncada. We visualize the simulation of 9 innings run and run allowed for it as an example (see appendix A). In case of a tie (where the total number of runs scored in the first 9 innings is equal to the number of runs allowed), the game will continue with an extra inning until a winner is determined. To ensure accuracy, we simulate 10,000 games for each batting order combination (lineup) in this project.
+<sup>(The possible batting outcomes of a player depend on the base situation. For example, If there is no runner on third base, there is no chance for batter to hit a sacrifice fly.)
 
 ## Output Analyses
 ### Analysis of the Best Lineup
