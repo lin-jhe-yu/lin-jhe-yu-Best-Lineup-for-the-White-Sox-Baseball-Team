@@ -119,26 +119,27 @@ After simulation, the best lineup for the Chicago White Sox team is identified. 
 <img width="306" alt="7" src="https://github.com/lin-jhe-yu/lin-jhe-yu-Best-Lineup-for-the-White-Sox-Baseball-Team/assets/121969452/0621b736-9776-4518-ab40-147ab7c23edd">
 
 #### Individual Player’s Performance Analysis
-In Figure 11, it shows the proportion of each player's occurrence in the second half of the lineups among all lineups. Based on the findings from the frequency proportion of players in the second half of the lineup, it shows that Hanser Alberto has the highest frequency proportion of 61.25% among all the players. This suggests that he is underperforming. Therefore, providing extra training to Hanser may be beneficial to improve his performance and better fit in the team.
+Figure shows that Hanser Alberto has the highest frequency proportion of 61.25% among all the players. This suggests that he is underperforming. Therefore, providing extra training to Hanser may be beneficial to improve his performance and better fit in the team.
 
 #### Figure 11: Proportion of player in Second Half of Lineup (total presence in second half/ total presence in all lineups)
 <img width="377" alt="11" src="https://github.com/lin-jhe-yu/lin-jhe-yu-Best-Lineup-for-the-White-Sox-Baseball-Team/assets/121969452/cb3709ed-3faf-4b0c-900f-7d7a2738003c">
 
 ## Conclusion
-In a nutshell, the Chicago White Sox team is recommended to use the best lineup in the coming season in 2023. Based on the findings of our analysis, using the best lineup can lead to a higher average run scored compared to the actual 2022 season. As a result, implementing the best lineup in the upcoming season could potentially result in an increase in the number of games won for the team. 
-When pursuing higher run scored, the team should carefully consider how changes in standard deviation can affect their results. Our analysis revealed a significant positive correlation between expected runs scored and standard deviation. This implies that higher expected runs scored are generally associated with higher variability in the lineup’s performance. For this reason, the team should be mindful of the potential risks and uncertainties associated with pursuing higher runs scored and take those changes into account when making strategic decisions.
+In a nutshell, the Chicago White Sox team is recommended to use the best lineup in the coming season in 2023. Based on the findings of our analysis, using the best lineup can lead to a higher average run scored compared to the actual 2022 season. 
+
+Higher expected runs scored are generally associated with higher variability (standard deviation) in the lineup’s performance. For this reason, the team should be mindful of the potential risks and uncertainties associated with pursuing higher runs scored and take those changes into account when making strategic decisions.
+
 Relying solely on the most expensive players within a lineup to achieve the highest runs is not a prudent strategy for the Chicago White Sox team. Although high-priced players are often considered to be better, the team's success is not solely determined by individual talent or payroll. Instead, other factors such as team synergy, coordination, and collective effectiveness can also influence the team's ability to score runs and win games. Therefore, the team should focus on building a cohesive and effective team that can perform well together, rather than relying solely on spending more money on players.
 
-## Takeaway
-* lineups with high win rate are typically found in the middle class of payroll.
-* A higher payroll does not necessarily lead to an increase in win rate
-*
+## Takeaways
+* Lineups with high win rate are typically found in the middle class of payroll.
+* Higher payrolls are not generally associated with higher win rate.
+* When pursuing higher run scored, the team should carefully consider how changes in standard deviation can affect their results.
 
 ## Discussions
-According to a previous study, when changing batting order with the same players, an increase in runs scored led to an increase in standard deviation. Our own simulation corroborated this finding, as we observed substituting players also resulted in an increase in standard deviation when there is an increase in runs scored. However, our simulation was conducted using a traditional batting order. Therefore, to gain a more comprehensive understanding of the impact of changing the batting order on standard deviation, further investigations can be conducted using different batting orders. By using this model, the Chicago White Sox team can determine whether substituting players or changing the batting order has a greater impact on standard deviation when aiming for higher runs scored.  This would provide valuable insights for the team to make informed decisions regarding their batter substitution strategy and optimize their performance on the field.
+Hirotsu, N. (2011) indicated that when changing batting order with the same players, an increase in runs scored led to an increase in standard deviation. Our own simulation corroborated this finding, as we observed substituting players also resulted in an increase in standard deviation when there is an increase in runs scored. However, our simulation was conducted using a modified batting order strategy. Therefore, to gain a more comprehensive understanding of the impact of changing the batting order on standard deviation, further investigations can be conducted using different batting orders. By using this model, the Chicago White Sox team can determine whether substituting players or changing the batting order has a greater impact on standard deviation when aiming for higher runs scored.  This would provide valuable insights for the team to make informed decisions regarding their batter substitution strategy and optimize their performance on the field.
 
 ## Reference
-* Bukiet, B., Harold, R., & Palacios, J. L. (n.d.). A Markov Chain Approach to Baseball. In Source: Operations Research (Vol. 45, Issue 1). https://about.jstor.org/terms
 * Ursin, D. (2014). A MARKOV MODEL FOR BASEBALL WITH APPLICATIONS.
 * Hirotsu, N. (2011). Reconsideration of the best batting order in baseball: Is the order to maximize the expected number of runs really the best? Journal of Quantitative Analysis in Sports, 7(2). doi:10.2202/1559-0410.1332
 * 2023 Chicago White Sox White Sox Roster & Staff. (n.d.). Retrieved May 6, 2023, from https://www.mlb.com/whitesox/roster
