@@ -24,10 +24,10 @@ In 2022, the White Sox team played 162 games in the AL Central. Runs allowed (RA
 
 The distribution of 9 innings RA in 2022 is approximately exponential (see Figure 2). To generate random numbers that conform to the exponential distribution, we used the previous year's data to set the lambda. Moreover, the distribution of RA in extra innings also demonstrated an exponential distribution (see Figure 3). The simulation of extra innings was performed in the same way as RA for 9 innings.
 
-#### Figure 2: Histogram and Density Function of Runs Allowed of 9 innings in 2022 with Random Numbers
+#### Figure 2: Histogram and density function of runs allowed of 9 innings in 2022 with random numbers
 <img src="https://github.com/lin-jhe-yu/lin-jhe-yu-Best-Lineup-for-the-White-Sox-Baseball-Team/assets/121969452/df80e8e4-5f16-4d9a-a118-5f7c9d858401.type" width="471" height="354">
 
-#### Figure 3: Histogram and Density Function of Runs Allowed of Extra inning in 2022 with Random Numbers
+#### Figure 3: Histogram and density function of runs allowed of extra inning in 2022 with random numbers
 <img src="https://github.com/lin-jhe-yu/lin-jhe-yu-Best-Lineup-for-the-White-Sox-Baseball-Team/assets/121969452/1add8eb0-76b1-452a-a2b8-276caefd4ca0.type" width="471" height="354">
 
 
@@ -39,7 +39,7 @@ We assume the following rule:
 3.	A Ground into double play (GIDP) can only occur when a runner is on first base.
 4.	A sacrifice fly (SF) can only occur when a runner is on third base.
 
-### Runner Advancing Rule
+### Runner advancing rule
 We assume the following base advancing rule:
 1.	A single hit (1B hit) advances all runners one base and the batter to first base.
 2.	A double hit (2B hit) advances all runners two bases and the batter to second base.
@@ -52,7 +52,7 @@ We assume the following base advancing rule:
 9.	Sacrifice bunts (SAC) are not counted at all.
 10.	A sacrifice fly (SF) advances a runner on third base to home base, while the other runner remains unchanged.
 
-### Algorithms of Program 
+### Algorithms of program 
 #### Figure 4: Overview of the program 
 <img width="500" alt="20" src="https://github.com/lin-jhe-yu/lin-jhe-yu-Best-Lineup-for-the-White-Sox-Baseball-Team/assets/121969452/7360307c-080d-4015-aa12-62ee66b027ed">
 
@@ -76,47 +76,47 @@ In algorithm 2, we have to first simulate a run for the first 9 innings (execute
 <sup>(The possible batting outcomes of a player depend on the base situation. For example, If there is no runner on third base, there is no chance for batter to hit a sacrifice fly.)
 
 ## Output Analyses
-### Analysis of the Best Lineup
+### Best lineup
+After simulation, the best lineup for the Chicago White Sox team is identified. See Table 2 for the list of the best lineup. See Table 3 for a comparison between the optimal lineup and the 2022 season lineup.
 
-After simulation, the best lineup for the Chicago White Sox team is identified. Table 1 shows the 9 batters who make up this lineup. 
-#### Table 2: Batters in the Best Lineup
+#### Table 2: Batters in the best lineup
 |Batting Order | Batters          | Position    |
 | :---         | :---             | :---        |
-| 1            | Andrew Benintendi| outfielders |
-| 2            | Tim Anderson     | infielders  |
-| 3            | Oscar Colás      | outfielders |
-| 4            | Eloy Jiménez     | outfielders |
-| 5            | Luis Robert Jr   | outfielders |
-| 6            | Andrew Vaughn    | infielders  |
-| 7            | Seby Zavala      | catchers    |
-| 8            | Elvis Andrus     | infielders  |
-| 9            | Gavin Sheets     | infielders  |
+| 1            | Andrew Benintendi| Outfielders |
+| 2            | Tim Anderson     | Infielders  |
+| 3            | Oscar Colás      | Outfielders |
+| 4            | Eloy Jiménez     | Outfielders |
+| 5            | Luis Robert Jr   | Outfielders |
+| 6            | Andrew Vaughn    | Infielders  |
+| 7            | Seby Zavala      | Catchers    |
+| 8            | Elvis Andrus     | Infielders  |
+| 9            | Gavin Sheets     | Infielders  |
 
-In the 2022 season, the average run score for 9 innings was 4.1111. On the other hand, in the simulated scenario using the best lineup, the average run score was 4.1849. This indicates that using the best lineup in the simulated scenario, without considering extra innings, led to a higher average run score of 0.07 points for 9 innings compared to the actual season. 
-Among the 162 games in the 2022 season, the team won 81 games, resulting in a win rate of 0.5. By simulating the performance of the team using the best lineup, the win rate was found to be 0.5132. Multiplying this win rate by the total  number of games in a regular season (162 games) yielded an estimated number of 83 games (0.5132 x 162 = 83.1384) won using this lineup. These results suggest that using this lineup in the upcoming 2023 season could potentially increase the team’s wins by two games compared to the previous season in 2022. 
+#### Table 3: Comparison between optimal lineup and 2022 season lineup
+|                  | 9 inning score   | Win rate  | Game Win|
+| :---             | :---             | :---      |:---     |
+|Best lineup       | 4.1849           |0.5132     |81       |
+|2022 season lineup| 4.1111           |0.5        |83       |
+|Improvement       | 0.07             |0.0132     |2        |
 
-### Further Analysis
-#### Standard Deviation Analysis
-The relationship between the expected runs scored and the standard deviation for each lineup of the Chicago White Sox is illustrated in Figure 7. The various plots in the figure represent different lineups. A clear trend can be observed, indicating that higher expected runs scored are generally associated with higher standard deviation.
-
+### Further Analyses
+#### Standard Ddviation analyses
+* Higher expected runs scored are generally associated with higher standard deviation.
 #### Figure 7: Relationship between Expected Runs Scored and Standard Deviation for Chicago White Sox Lineups
 <img width="306" alt="7" src="https://github.com/lin-jhe-yu/lin-jhe-yu-Best-Lineup-for-the-White-Sox-Baseball-Team/assets/121969452/87f64be1-4706-4c7f-a511-ab3308a8994d">
 
-The relationship between expected runs scored and win rate is shown in Figure 8. The plots in the figure demonstrate a clear pattern, with the trend line indicating a positive slope. This suggests that as the expected runs scored increases, the win rate tends to increase as well. Hence, it implies that scoring more runs has a higher likelihood of winning games.
+* As expected runs scored increases, the win rate tends to increase.
+#### Figure 8: Relationship between Expected Runs Scored and Standard Deviation for Chicago White Sox Lineups
+<img width="306" alt="7" src="https://github.com/lin-jhe-yu/lin-jhe-yu-Best-Lineup-for-the-White-Sox-Baseball-Team/assets/121969452/78bc7807-9189-40c1-b406-e6599fce6bae">
 
-Figure 7: Relationship between Expected Runs Scored and Standard Deviation for Chicago White Sox Lineups
-<img width="303" alt="8" src="https://github.com/lin-jhe-yu/lin-jhe-yu-Best-Lineup-for-the-White-Sox-Baseball-Team/assets/121969452/78bc7807-9189-40c1-b406-e6599fce6bae">
-
-#### Cost Analysis of Each Lineup
-The downward trend exhibited in Figure 9 is clear, with the data points showing a noticeable decrease in expected runs scored as payroll increases. Similarly, Figure 10 also indicates a negative correlation between expected runs scored and win rate. An increase in payroll often corresponds with a decrease in win rate. 
-Moreover, lineups with high win rate are typically found in the middle class of payroll, while a higher payroll does not necessarily lead to an increase in win rate. In fact, an increase in payroll beyond the middle class may even lead to a decline in win rate and drag down the bottom line.
-Thus, the amount of money spent on players does not necessarily translate into higher expected runs scored and win rate. These findings suggest that there may be other factors that contribute to a team's success beyond simply spending money on players.
-
+#### Cost Analyses of Each Lineup
+* Higher lineup payrolls are generally associated with lower expected runs.
 #### Figure 9: Relationship between Expected Runs Scored and Payroll of Each Lineup
-<img width="218" alt="9" src="https://github.com/lin-jhe-yu/lin-jhe-yu-Best-Lineup-for-the-White-Sox-Baseball-Team/assets/121969452/d9be6d1f-98cf-4b37-b6dc-ba94edf67b9e">
+<img width="306" alt="7" src="https://github.com/lin-jhe-yu/lin-jhe-yu-Best-Lineup-for-the-White-Sox-Baseball-Team/assets/121969452/d9be6d1f-98cf-4b37-b6dc-ba94edf67b9e">
 
+* As linup payroll increases, the win rate tends to decrease.
 #### Figure 10: Relationship between Win Rate and Payroll of Each Lineup
-<img width="216" alt="10" src="https://github.com/lin-jhe-yu/lin-jhe-yu-Best-Lineup-for-the-White-Sox-Baseball-Team/assets/121969452/0621b736-9776-4518-ab40-147ab7c23edd">
+<img width="306" alt="7" src="https://github.com/lin-jhe-yu/lin-jhe-yu-Best-Lineup-for-the-White-Sox-Baseball-Team/assets/121969452/0621b736-9776-4518-ab40-147ab7c23edd">
 
 #### Individual Player’s Performance Analysis
 In Figure 11, it shows the proportion of each player's occurrence in the second half of the lineups among all lineups. Based on the findings from the frequency proportion of players in the second half of the lineup, it shows that Hanser Alberto has the highest frequency proportion of 61.25% among all the players. This suggests that he is underperforming. Therefore, providing extra training to Hanser may be beneficial to improve his performance and better fit in the team.
@@ -130,8 +130,8 @@ When pursuing higher run scored, the team should carefully consider how changes 
 Relying solely on the most expensive players within a lineup to achieve the highest runs is not a prudent strategy for the Chicago White Sox team. Although high-priced players are often considered to be better, the team's success is not solely determined by individual talent or payroll. Instead, other factors such as team synergy, coordination, and collective effectiveness can also influence the team's ability to score runs and win games. Therefore, the team should focus on building a cohesive and effective team that can perform well together, rather than relying solely on spending more money on players.
 
 ## Takeaway
-*
-*
+* lineups with high win rate are typically found in the middle class of payroll.
+* A higher payroll does not necessarily lead to an increase in win rate
 *
 
 ## Discussions
