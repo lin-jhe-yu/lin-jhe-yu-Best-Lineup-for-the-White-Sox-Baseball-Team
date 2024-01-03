@@ -54,22 +54,22 @@ We assume the following base advancing rule:
 
 ### Algorithms of Program 
 #### Figure 4: Overview of the program 
-<img width="416" alt="4" src="https://github.com/lin-jhe-yu/lin-jhe-yu-Best-Lineup-for-the-White-Sox-Baseball-Team/assets/121969452/23afbd93-c5b0-42ab-a0e5-8b4e9de4b16e">
+<img width="500" alt="20" src="https://github.com/lin-jhe-yu/lin-jhe-yu-Best-Lineup-for-the-White-Sox-Baseball-Team/assets/121969452/7360307c-080d-4015-aa12-62ee66b027ed">
 
 #### Algorithm 1: List out all the lineup combinations and their batting order.
 #### Figure 5: Algorithm 1
-<img width="173" alt="5" src="https://github.com/lin-jhe-yu/lin-jhe-yu-Best-Lineup-for-the-White-Sox-Baseball-Team/assets/121969452/c19ecd26-3b5d-4612-b60a-44c60976b7ac">
+<img width="200" alt="8" src="https://github.com/lin-jhe-yu/lin-jhe-yu-Best-Lineup-for-the-White-Sox-Baseball-Team/assets/121969452/c19ecd26-3b5d-4612-b60a-44c60976b7ac">
 
 There are 13 players in the white sox team in 2023, including 2 catchers, 7 infielders, 4 outfielders. Players in the batting lineup and fielding positions should be consistent, which means that each batting combination would consist of 1 catcher, 4 infielders, 3 outfielders, and 1 designated hitter. Thus, the amount of batting combinations is <img width="230" alt="15" src="https://github.com/lin-jhe-yu/lin-jhe-yu-Best-Lineup-for-the-White-Sox-Baseball-Team/assets/121969452/6a4f1183-cdd1-431a-85a3-c373170fc59b">
 
-In 1997, Bukiet et al. proposed ten criteria for arranging optimal batting orders for a team. However, the possible batting orders for all of our 387 combinations (987 batting orders for each combination, resulting in a total of 381,969 possibilities) makes it challenging and time-consuming to compute. To address this issue, the project adopted an adjusted version of the traditional batting order proposed by Ursin (2014) to reduce computation time (see Figure 6 for modified batting order strategy).
+Trying all the possible batting orders is computationally time-consuming. To address this issue, the project adopted an adjusted version of the traditional batting order proposed by Ursin (2014) to reduce computation time (see Figure 6 for modified batting order strategy).
 
 #### Figure 6: Modified batting order strategy
-<img width="800" alt="15" src="https://github.com/lin-jhe-yu/lin-jhe-yu-Best-Lineup-for-the-White-Sox-Baseball-Team/assets/121969452/67835543-312a-4c2b-860f-9b4fa60bc0c3">
+<img width="700" alt="13" src="https://github.com/lin-jhe-yu/lin-jhe-yu-Best-Lineup-for-the-White-Sox-Baseball-Team/assets/121969452/67835543-312a-4c2b-860f-9b4fa60bc0c3">
 
 #### Algorithm 2.1: Simulate run for n innings
 #### Figure 7: Algorithm 2.1
-<img width="360" alt="16" src="https://github.com/lin-jhe-yu/lin-jhe-yu-Best-Lineup-for-the-White-Sox-Baseball-Team/assets/121969452/9e1b4306-13c9-408b-8483-898c3c3d1339">
+<img width="580" alt="20" src="https://github.com/lin-jhe-yu/lin-jhe-yu-Best-Lineup-for-the-White-Sox-Baseball-Team/assets/121969452/e16f86e9-6ccb-497a-b05b-2dcdc2550d22">
 
 In algorithm 2, we have to first simulate a run for the first 9 innings (executes the algorithm 2.1 for 9 times). The program generates the batting outcome according to the probabilities, changes the base situation correspondingly, and records the outs if applicable. The run will only be recorded if the inning does not end (3 outs). Same process is applied to extra innings except the simulation only runs for 1 time this time. To ensure accuracy, we simulate 10,000 games for each batting order combination (lineup) in this project.
 
@@ -79,7 +79,7 @@ In algorithm 2, we have to first simulate a run for the first 9 innings (execute
 ### Analysis of the Best Lineup
 
 After simulation, the best lineup for the Chicago White Sox team is identified. Table 1 shows the 9 batters who make up this lineup. 
-#### Table 1: Batters in the Best Lineup
+#### Table 2: Batters in the Best Lineup
 |Batting Order | Batters          | Position    |
 | :---         | :---             | :---        |
 | 1            | Andrew Benintendi| outfielders |
