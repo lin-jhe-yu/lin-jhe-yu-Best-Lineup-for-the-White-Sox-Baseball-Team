@@ -122,7 +122,7 @@ After simulation, the best lineup for the Chicago White Sox team is identified. 
 Figure shows that Hanser Alberto has the highest frequency proportion of 61.25% among all the players. This suggests that he is underperforming. Therefore, providing extra training to Hanser may be beneficial to improve his performance and better fit in the team.
 
 #### Figure 11: Proportion of player in Second Half of Lineup (total presence in second half/ total presence in all lineups)
-<img width="377" alt="11" src="https://github.com/lin-jhe-yu/lin-jhe-yu-Best-Lineup-for-the-White-Sox-Baseball-Team/assets/121969452/cb3709ed-3faf-4b0c-900f-7d7a2738003c">
+<img width="550" alt="Picture1" src="https://github.com/lin-jhe-yu/lin-jhe-yu-Best-Lineup-for-the-White-Sox-Baseball-Team/assets/121969452/b5b2b683-4ada-4f37-8e6b-de7a979f5114">
 
 ## Conclusion
 In a nutshell, the Chicago White Sox team is recommended to use the best lineup in the coming season in 2023. Based on the findings of our analysis, using the best lineup can lead to a higher average run scored compared to the actual 2022 season. 
