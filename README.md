@@ -144,3 +144,7 @@ Hirotsu, N. (2011) indicated that when changing batting order with the same play
 * Hirotsu, N. (2011). Reconsideration of the best batting order in baseball: Is the order to maximize the expected number of runs really the best? Journal of Quantitative Analysis in Sports, 7(2). doi:10.2202/1559-0410.1332
 * 2023 Chicago White Sox White Sox Roster & Staff. (n.d.). Retrieved May 6, 2023, from https://www.mlb.com/whitesox/roster
 
+## Project Team
+* Jhe Yu (Lawrence) Lin
+* Lok I (Minnie) Lou 
+* HOI KEI (Joanne) TANG
